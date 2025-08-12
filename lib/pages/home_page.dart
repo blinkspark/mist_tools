@@ -11,7 +11,26 @@ class HomePage extends GetView<AppController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: createNavbar(title: "Home"),
-      body: SafeArea(child: Center(child: Text('MyController'))),
+      body: SafeArea(
+        child: GridView.extent(
+          maxCrossAxisExtent: 150,
+          // padding: const EdgeInsets.all(20),
+          mainAxisSpacing: 16,
+          crossAxisSpacing: 16,
+          children: [
+            InkWell(
+              onTap: () => {},
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.cloud, size: 50),
+                  Text("云盘", style: Theme.of(context).textTheme.titleMedium),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

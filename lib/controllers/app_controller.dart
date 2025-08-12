@@ -27,11 +27,13 @@ class AppController extends GetxController {
     super.onInit();
   }
 
+  // 主题模式
   final Rx<ThemeMode> themeMode = ThemeMode.system.obs;
   void setThemeMode(ThemeMode theme) {
     themeMode.value = theme;
   }
 
+  // 主题颜色
   final Rx<MaterialColor> themeColor = Colors.blue.obs;
   void setThemeColor(MaterialColor color) {
     themeColor.value = color;
@@ -41,6 +43,7 @@ class AppController extends GetxController {
     }
   }
 
+  // 字体缩放
   final Rx<double> textScaler = 1.0.obs;
   void setTextScaler(double scaler) {
     textScaler.value = scaler;

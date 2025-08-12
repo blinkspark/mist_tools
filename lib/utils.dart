@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-AppBar createNavbar({String title = "Hello", bool showSettings = true}) {
+AppBar createNavbar({String title = "AppBar", bool showSettings = true}) {
   return AppBar(
     title: Text(title),
     centerTitle: true,
